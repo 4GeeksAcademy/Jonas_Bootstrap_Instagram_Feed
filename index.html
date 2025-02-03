@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Jonas Bootstrap IG Feed</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+     <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body class="bg-light">
+    
+    <!-- Navegación -->
+    
+    <nav class="navbar navbar-light bg-white shadow-sm px-3">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <i class="bi bi-instagram fs-4 me-2"></i>
+                <span class="fw-bold">Instagram</span>
+            </a>
+            
+            <!-- Botones a la derecha -->
+            <div class="d-flex align-items-center ms-auto">
+                <button class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#createPostModal">Create a new post</button>
+
+                <div class="modal fade" id="createPostModal" tabindex="-1" aria-labelledby="createPostModalLabel" aria-hidden="true">
+                    <div class="modal-dialog h-40">
+                        <div class="modal-content d-flex flex-column h-100">
+
+                            <div class="modal-header border-bottom">
+                                <h5 class="modal-tittle">Create a new post</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body flex-grow-1">
+                                <form>
+                                    <div class="d-flex flex-column">
+                                        <label for="message-text" class="col-form-label mb-2">Caption:</label>
+                                        <textarea class="form-control" id="message-text" placeholder="Add the caption of your post here"></textarea>
+                                        </div>
+                                </form>
+                                <div class="container mt-2">
+                                    <button class="btn bg-light text-dark border">
+                                        <i class="bi bi-camera-fill"></i>
+                                    </button>
+                                    <button class="btn bg-light text-dark border">
+                                        <i class="bi bi-geo-alt-fill"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="modal-footer border-top d-flex justify-content-between">
+                                <div class="ms-auto">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-success">Publish</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+                <!-- Dropdown de configuración -->
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                    <i class="bi bi-gear-fill"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item">Profile</a></li>
+                    <li><a class="dropdown-item">Accesibility</a></li>
+                    <li><a class="dropdown-item">Privacy and Data</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text-danger">Log Out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Botones de las vistas -->
+    <div class="container text-center mt-3">
+        <ul class="nav nav-pills justify-content-center">
+
+            <!-- Grid -->
+            <li class="nav-item">
+                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#grid-view">
+                    <i class="bi bi-grid-fill"></i>
+                </button>
+            </li>
+
+            <!-- Time line -->
+            <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#single-view">
+                    <i class="bi bi-square-fill"></i>
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Contenidos de las vistas -->
+    <div class="tab-content mt-3">
+
+        <!-- Grid -->
+        <div id="grid-view" class="tab-pane fade show active">
+            <div class="container">
+                <div class="row g-3">
+                    <div class="col-md-4 col-sm-6 d-flex">
+                        <img 
+                        src="./assets/images/pexels-ngai-man-yan-267441-842153.jpg"
+                        class="img-fluid w-100 h-100 rounded" 
+                        alt="image"
+                        />
+                    </div>
+                    <div class="col-md-4 col-sm-6 d-flex">
+                        <img 
+                        src="./assets/images/pexels-joshkjack-135018.jpg"
+                        class="img-fluid w-100 h-100 rounded" 
+                        alt="image"
+                        />
+                    </div>
+                    <div class="col-md-4 col-sm-6 d-flex">
+                        <img 
+                        src="./assets/images/pexels-orlovamaria-4916258.jpg"
+                        class="img-fluid w-100 h-100 rounded" 
+                        alt="image"
+                        />
+                    </div>
+
+
+                    <div class="col-md-4 col-sm-6 d-flex">
+                        <img 
+                        src="./assets/images/pexels-pixabay-256150.jpg"
+                        class="img-fluid w-100 h-100 rounded" 
+                        alt="image"
+                        />
+                    </div>
+                    <div class="col-md-4 col-sm-6 d-flex">
+                        <img 
+                        src="./assets/images/pexels-sincegameon-30426849.jpg"
+                        class="img-fluid w-100 h-100 rounded" 
+                        alt="image"
+                        />
+                    </div>
+                    <div class="col-md-4 col-sm-6 d-flex">
+                        <img 
+                        src="./assets/images/pexels-tae-fuller-331517-1141853.jpg"
+                        class="img-fluid w-100 h-100 rounded" 
+                        alt="image"
+                        />
+                    </div>
+
+
+                    <div class="col-md-4 col-sm-6 d-flex">
+                        <img 
+                        src="./assets/images/pexels-francesco-ungaro-1878715.jpg"
+                        class="img-fluid w-100 h-100 rounded" 
+                        alt="image"
+                        />
+                    </div>
+                    <div class="col-md-4 col-sm-6 d-flex">
+                        <img 
+                        src="./assets/images/pexels-pixabay-210017.jpg"
+                        class="img-fluid w-100 h-100 rounded" 
+                        alt="image"
+                        />
+                    </div>
+                    <div class="col-md-4 col-sm-6 d-flex">
+                        <img 
+                        src="./assets/images/pexels-riciardus-789380.jpg"
+                        class="img-fluid w-100 h-100 rounded" 
+                        alt="image"
+                        />
+                    </div>
+                       
+                </div>
+            </div>
+        </div>
+
+    <!-- Timeline -->
+        <div id="single-view" class="tab-pane fade">
+            <div class="container d-flex flex-column align-items-center overflow-auto vh-100">
+                
+                <div class="card mb-3 w-75">
+                    <div class="card-header d-flex justify-content-between">
+                        <span>Museum</span>
+                        <span>17/09</span>
+                    </div>
+                    <img 
+                    src="./assets/images/pexels-ngai-man-yan-267441-842153.jpg" 
+                    class="card-img-top"
+                    alt="Image"
+                    />
+                    <div class="card-body">
+                        <p class="fw-bold">345 likes</p>
+                        <p> This photo shows a famous museum</p>
+                    </div>
+                </div>
+
+                <div class="card mb-3 w-75">
+                    <div class="card-header d-flex justify-content-between">
+                        <span>Cathedral</span>
+                        <span>16/08</span>
+                    </div>
+                    <img 
+                    src="./assets/images/pexels-joshkjack-135018.jpg" 
+                    class="card-img-top"
+                    alt="Image"
+                    />
+                    <div class="card-body">
+                        <p class="fw-bold">768 likes</p>
+                        <p> This photo shows a beautiful cathedral</p>
+                    </div>
+                </div>
+
+                <div class="card mb-3 w-75">
+                    <div class="card-header d-flex justify-content-between">
+                        <span>Someone's home</span>
+                        <span>25/07</span>
+                    </div>
+                    <img 
+                    src="./assets/images/pexels-orlovamaria-4916258.jpg" 
+                    class="card-img-top"
+                    alt="Image"
+                    />
+                    <div class="card-body">
+                        <p class="fw-bold">256 likes</p>
+                        <p>Who's living in there?</p>
+                    </div>
+
+                    <!-- 2º bloque  -->
+                </div>
+                <div class="card mb-3 w-75">
+                    <div class="card-header d-flex justify-content-between">
+                        <span>Valencia</span>
+                        <span>19/06</span>
+                    </div>
+                    <img 
+                    src="./assets/images/pexels-pixabay-256150.jpg" 
+                    class="card-img-top"
+                    alt="Image"
+                    />
+                    <div class="card-body">
+                        <p class="fw-bold">561 likes</p>
+                        <p> This photo shows a famous building</p>
+                    </div>
+                </div>
+
+                <div class="card mb-3 w-75">
+                    <div class="card-header d-flex justify-content-between">
+                        <span>Bycicle</span>
+                        <span>25/05</span>
+                    </div>
+                    <img 
+                    src="./assets/images/pexels-sincegameon-30426849.jpg" 
+                    class="card-img-top"
+                    alt="Image"
+                    />
+                    <div class="card-body">
+                        <p class="fw-bold">891 likes</p>
+                        <p> Love this photo</p>
+                    </div>
+                </div>
+
+                <div class="card mb-3 w-75">
+                    <div class="card-header d-flex justify-content-between">
+                        <span>San Francisco</span>
+                        <span>14/04</span>
+                    </div>
+                    <img 
+                    src="./assets/images/pexels-tae-fuller-331517-1141853.jpg" 
+                    class="card-img-top"
+                    alt="Image"
+                    />
+                    <div class="card-body">
+                        <p class="fw-bold">698 likes</p>
+                        <p> This photo shows an amazing bridge</p>
+                    </div>
+                </div>
+
+                <!-- 3er bloque -->
+                <div class="card mb-3 w-75">
+                    <div class="card-header d-flex justify-content-between">
+                        <span>Building</span>
+                        <span>29/03</span>
+                    </div>
+                    <img 
+                    src="./assets/images/pexels-francesco-ungaro-1878715.jpg" 
+                    class="card-img-top"
+                    alt="Image"
+                    />
+                    <div class="card-body">
+                        <p class="fw-bold">727 likes</p>
+                        <p> This photo shows a interesting building</p>
+                    </div>
+                </div>
+
+                <div class="card mb-3 w-75">
+                    <div class="card-header d-flex justify-content-between">
+                        <span>Village</span>
+                        <span>16/02</span>
+                    </div>
+                    <img 
+                    src="./assets/images/pexels-pixabay-210017.jpg" 
+                    class="card-img-top"
+                    alt="Image"
+                    />
+                    <div class="card-body">
+                        <p class="fw-bold">521 likes</p>
+                        <p> My parents's village</p>
+                    </div>
+                </div>
+
+                <div class="card mb-3 w-75">
+                    <div class="card-header d-flex justify-content-between">
+                        <span>Snowy mountains</span>
+                        <span>23/01</span>
+                    </div>
+                    <img 
+                    src="./assets/images/pexels-riciardus-789380.jpg" 
+                    class="card-img-top"
+                    alt="Image"
+                    />
+                    <div class="card-body">
+                        <p class="fw-bold">844 likes</p>
+                        <p>My favorite place in the world</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+<!-- <div class="container mt-3">
+    <div id="gallery" class="row gallery">
+        <div class="md-4 col-12 mb-3"><img src="https://picsum.photos/id/11/200/300">
+        <div class="md-4 col-12 mb-3"><img src="https://picsum.photos/id/22/200/300">
+        <div class="md-4 col-12 mb-3"><img src="https://picsum.photos/id/42/200/300">
+        <div class="md-4 col-12 mb-3"><img src="https://picsum.photos/id/58/200/300">
+        <div class="md-4 col-12 mb-3"><img src="https://picsum.photos/id/64/200/300">
+        <div class="md-4 col-12 mb-3"><img src="https://picsum.photos/id/69/200/300">
+        <div class="md-4 col-12 mb-3"><img src="https://picsum.photos/id/91/200/300">
+        <div class="md-4 col-12 mb-3"><img src="https://picsum.photos/id/177/200/300">
+        <div class="md-4 col-12 mb-3"><img src="https://picsum.photos/id/195/200/300">
+        
+    </div>
+</div> -->
